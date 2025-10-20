@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OGNAMISMS | Integrated Business Solutions</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1a365d',
+                        secondary: '#2b6cb0',
+                        accent: '#3182ce',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-height {
+            min-height: calc(100vh - 80px);
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .nav-link::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: #3182ce;
+            transition: width .3s;
+            margin-top: 2px;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-800 bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <a href="#" class="text-xl font-bold text-primary flex items-center">
+                        <img src="https://huggingface.co/spaces/solasiya/ognamisms-synergy-hub/resolve/main/images/logo_.png" alt="OGNAMISMS Logo" class="h-20 mr-2">
+</a>
+</div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#services" class="nav-link text-gray-700 hover:text-primary">Services</a>
+                    <a href="#about" class="nav-link text-gray-700 hover:text-primary">About</a>
+                    <a href="#contact" class="nav-link text-gray-700 hover:text-primary">Contact</a>
+                    <a href="tel:+27627081775" class="bg-accent text-white px-4 py-2 rounded-md hover:bg-primary transition duration-300 flex items-center">
+                        <i data-feather="phone" class="mr-2"></i> Call Us
+                    </a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-700 focus:outline-none">
+                        <i data-feather="menu"></i>
+                    </button>
+                </div>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden py-4">
+                <a href="#services" class="block py-2 text-gray-700 hover:text-primary">Services</a>
+                <a href="#about" class="block py-2 text-gray-700 hover:text-primary">About</a>
+                <a href="#contact" class="block py-2 text-gray-700 hover:text-primary">Contact</a>
+                <a href="tel:+27627081775" class="block mt-2 bg-accent text-white px-4 py-2 rounded-md hover:bg-primary transition duration-300 text-center">
+                    Call Us
+                </a>
+            </div>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <section class="hero-height bg-gradient-to-r from-primary to-secondary flex items-center relative overflow-hidden">
+        <div class="absolute inset-0 z-0 overflow-hidden">
+                    <img src="https://huggingface.co/spaces/solasiya/ognamisms-synergy-hub/resolve/main/images/OGNAMISM.png" alt="OGNAMISMS Business Solutions" 
+                 class="w-full h-full object-contain opacity-20 animate-train"
+                 style="animation: train 30s linear infinite;">
+</div>
+<div class="container mx-auto px-6 z-10">
+<div class="max-w-2xl">
+<h1 class="text-4xl md:text-5xl font-bold text-white mb-6">Integrated Solutions for Confident Business Growth</h1>
+<p class="text-xl text-gray-100 mb-8">Streamlining legal, financial, and operational challenges with our multidisciplinary expertise.</p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#contact" class="bg-white text-primary px-6 py-3 rounded-md font-medium hover:bg-gray-100 transition duration-300 text-center">
+                        Get Started
+                    </a>
+                    <a href="#services" class="border-2 border-white text-white px-6 py-3 rounded-md font-medium hover:bg-white hover:text-primary transition duration-300 text-center">
+                        Our Services
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-primary mb-4">Our Core Service Divisions</h2>
+                <div class="w-20 h-1 bg-accent mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Legal Card -->
+                <div class="service-card bg-white rounded-lg shadow-md p-6 transition duration-300">
+                    <div class="text-accent mb-4">
+                        <i data-feather="scale" class="w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-3">Legal & Compliance</h3>
+                    <p class="text-gray-600 mb-4">Expert legal advisory ensuring regulatory adherence and protection.</p>
+                    <ul class="text-gray-600 space-y-2">
+                        <li class="flex items-start">
+                            <i data-feather="check" class="text-green-500 mr-2 mt-1"></i>
+                            <span>Contract Management</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check" class="text-green-500 mr-2 mt-1"></i>
+                            <span>Labour Law</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check" class="text-green-500 mr-2 mt-1"></i>
+                            <span>Intellectual Property</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check" class="text-green-500 mr-2 mt-1"></i>
+                            <span>Litigation Support</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Financial Card -->
+                <div class="service-card bg-white rounded-lg shadow-md p-6 transition duration-300">
+                    <div class="text-accent mb-4">
+                        <i data-feather="dollar-sign" class="w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-3">Financial Management</h3>
+                    <p class="text-gray-600 mb-4">Optimizing cash flow, ensuring tax compliance, and driving profitability.</p>
+                    <ul class="text-gray-600 space-y-2">
+                        <li class="flex items-start">
+                            <i data-feather="check" class="text-green-500 mr-2 mt-1"></i>
+                            <span>Tax Compliance</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check" class="text-green-500 mr-2 mt-1"></i>
+                            <span>Payroll Processing</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check" class="text-green-500 mr-2 mt-1"></i>
+                            <span>Financial Planning</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check" class="text-green-500 mr-2 mt-1"></i>
+                            <span>Profitability Analysis</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Business Advisory Card -->
+                <div class="service-card bg-white rounded-lg shadow-md p-6 transition duration-300">
+                    <div class="text-accent mb-4">
+                        <i data-feather="trending-up" class="w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-3">Business Advisory</h3>
+                    <p class="text-gray-600 mb-4">Structuring for growth, managing risk, and preparing for investment.</p>
+                    <ul class="text-gray-600 space-y-2">
+                        <li class="flex items-start">
+                            <i data-feather="check" class="text-green-500 mr-2 mt-1"></i>
+                            <span>Business Structuring</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check" class="text-green-500 mr-2 mt-1"></i>
+                            <span>Growth Consulting</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check" class="text-green-500 mr-2 mt-1"></i>
+                            <span>Investor Readiness</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check" class="text-green-500 mr-2 mt-1"></i>
+                            <span>Risk Management</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Cleaning Card -->
+                <div class="service-card bg-white rounded-lg shadow-md p-6 transition duration-300">
+                    <div class="text-accent mb-4">
+                        <i data-feather="home" class="w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-3">Specialized Cleaning</h3>
+                    <p class="text-gray-600 mb-4">Professional post-construction cleaning for flawless project completion.</p>
+                    <ul class="text-gray-600 space-y-2">
+                        <li class="flex items-start">
+                            <i data-feather="check" class="text-green-500 mr-2 mt-1"></i>
+                            <span>Site Clean-up</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check" class="text-green-500 mr-2 mt-1"></i>
+                            <span>Final Sparkle</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check" class="text-green-500 mr-2 mt-1"></i>
+                            <span>Safety Compliance</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check" class="text-green-500 mr-2 mt-1"></i>
+                            <span>Move-in Ready</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-10 lg:mb-0 lg:pr-10">
+                    <div class="bg-gray-100 p-8 rounded-lg">
+                        <h2 class="text-3xl font-bold text-primary mb-6">Why Partner With OGNAMISMS?</h2>
+                        <p class="text-gray-600 mb-6">We are a multidisciplinary professional services firm providing integrated, tailored solutions designed to help businesses of all sizes operate confidently, legally, and profitably.</p>
+                        <p class="text-gray-600 mb-6">Rooted in integrity and a unified commitment to client success, we streamline complex legal, financial, and operational challenges.</p>
+                        <p class="text-gray-600">Our holistic approach supports businesses from ambitious startups to established enterprises by ensuring all core functions are compliant, efficient, and aligned with strategic goals.</p>
+                    </div>
+                </div>
+                <div class="lg:w-1/2">
+                    <div class="bg-primary text-white p-8 rounded-lg">
+                        <h3 class="text-2xl font-bold mb-6">Our Value Proposition</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="bg-accent rounded-full p-2 mr-4">
+                                    <i data-feather="users" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Single Point of Contact</h4>
+                                    <p class="text-gray-200">Eliminate the inefficiencies of managing multiple service providers.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-accent rounded-full p-2 mr-4">
+                                    <i data-feather="shield" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Comprehensive Protection</h4>
+                                    <p class="text-gray-200">Ensure all aspects of your business are legally protected and compliant.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-accent rounded-full p-2 mr-4">
+                                    <i data-feather="bar-chart-2" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Strategic Growth</h4>
+                                    <p class="text-gray-200">Data-driven insights to improve profitability and operational efficiency.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-accent rounded-full p-2 mr-4">
+                                    <i data-feather="check-circle" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Execution Focus</h4>
+                                    <p class="text-gray-200">We don't just advise; we execute, allowing you to focus on growth.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-primary mb-4">Client Testimonials</h2>
+                <div class="w-20 h-1 bg-accent mx-auto"></div>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+<p class="text-gray-600 italic mb-4">"OGNAMISMS transformed our financial management processes, saving us both time and money while ensuring full compliance."</p>
+                    <div class="flex items-center">
+                        <div class="bg-gray-200 rounded-full w-10 h-10 mr-3"></div>
+                        <div>
+                            <h4 class="font-bold text-primary">Sarah K.</h4>
+                            <p class="text-gray-500 text-sm">CEO, Tech Startup</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+<p class="text-gray-600 italic mb-4">"Their legal team helped us navigate complex contracts and IP protection with absolute professionalism."</p>
+                    <div class="flex items-center">
+                        <div class="bg-gray-200 rounded-full w-10 h-10 mr-3"></div>
+                        <div>
+                            <h4 class="font-bold text-primary">James M.</h4>
+                            <p class="text-gray-500 text-sm">Founder, Creative Agency</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+<p class="text-gray-600 italic mb-4">"The post-construction cleaning service was exceptional - our new office was spotless and ready for occupancy."</p>
+                    <div class="flex items-center">
+                        <div class="bg-gray-200 rounded-full w-10 h-10 mr-3"></div>
+                        <div>
+                            <h4 class="font-bold text-primary">Thandi N.</h4>
+                            <p class="text-gray-500 text-sm">Property Developer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-primary text-white" style="overflow: visible">
+<div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Get In Touch</h2>
+                <div class="w-20 h-1 bg-accent mx-auto"></div>
+            </div>
+            <div class="flex flex-col lg:flex-row">
+                <div class="lg:w-1/2 mb-10 lg:mb-0 lg:pr-10">
+                    <h3 class="text-2xl font-bold mb-6">Contact Information</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-accent rounded-full p-2 mr-4">
+                                <i data-feather="mail" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Email</h4>
+                                <a href="mailto:ognamisms@gmail.com" class="hover:underline">ognamisms@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-accent rounded-full p-2 mr-4">
+                                <i data-feather="phone" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Phone/WhatsApp</h4>
+                                <a href="tel:+27627081775" class="hover:underline">(+27) 62 708 1775</a>
+                            </div>
+                        </div>
+                            <div class="flex items-start">
+                                <div class="bg-accent rounded-full p-2 mr-4">
+                                    <i data-feather="globe" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Website</h4>
+                                    <a href="http://www.ognamism.co.za" target="_blank" class="hover:underline">www.ognamism.co.za</a>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-accent rounded-full p-2 mr-4">
+                                    <i data-feather="map-pin" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Service Area</h4>
+                                    <p class="text-gray-200">Cape Town Metro including: Strand, Somerset West, Gordons Bay, Grabouw, Stellenbosch, Franschhoek, Paarl, Wellington</p>
+                                </div>
+                            </div>
+</div>
+                    <div class="mt-10">
+                        <h3 class="text-2xl font-bold mb-6">Business Hours</h3>
+                        <div class="space-y-2">
+                            <div class="flex justify-between">
+                                <span>Monday - Friday</span>
+                                <span>8:00 AM - 5:00 PM</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Saturday</span>
+                                <span>9:00 AM - 1:00 PM</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Sunday</span>
+                                <span>Closed</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2">
+                    <div class="mb-8 bg-white rounded-lg shadow-md">
+<iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d211711.01605417248!2d18.45074052500002!3d-33.914870300000014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcc500f8826eed7%3A0x687fe1fc2828aa87!2sCape%20Town%2C%20South%20Africa!5e0!3m2!1sen!2sus!4v1690830617049!5m2!1sen!2sus" 
+                            width="100%"
+                            height="400" 
+style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                    <form class="bg-white text-gray-800 p-8 rounded-lg shadow-md" style="margin-top: 20px">
+<h3 class="text-2xl font-bold mb-6 text-primary">Send Us a Message</h3>
+                        <div class="mb-4" style="margin-bottom: 16px">
+<label for="name" class="block text-gray-700 mb-2">Your Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-accent">
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="block text-gray-700 mb-2">Email Address</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-accent">
+                        </div>
+                        <div class="mb-4">
+                            <label for="phone" class="block text-gray-700 mb-2">Phone Number</label>
+                            <input type="tel" id="phone" class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-accent">
+                        </div>
+                        <div class="mb-4">
+                            <label for="service" class="block text-gray-700 mb-2">Service of Interest</label>
+                            <select id="service" class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-accent">
+                                <option value="">Select a service</option>
+                                <option value="legal">Legal & Compliance</option>
+                                <option value="financial">Financial Management</option>
+                                <option value="advisory">Business Advisory</option>
+                                <option value="cleaning">Specialized Cleaning</option>
+                            </select>
+                        </div>
+                        <div class="mb-6" style="margin-bottom: 24px">
+<label for="message" class="block text-gray-700 mb-2">Your Message</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-accent"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-accent text-white py-3 rounded-md font-medium hover:bg-primary transition duration-300">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between">
+                <div class="mb-8 md:mb-0">
+                    <a href="#" class="text-xl font-bold text-white flex items-center mb-4">
+                    <img src="https://huggingface.co/spaces/solasiya/ognamisms-synergy-hub/resolve/main/images/logo_.png" alt="OGNAMISMS Logo" class="h-20 mr-2 filter brightness-0 invert">
+</a>
+<p class="text-gray-400 max-w-md">Providing integrated, tailored solutions to help businesses operate confidently, legally, and profitably.</p>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+                    <div>
+                        <h4 class="text-lg font-bold mb-4">Services</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">Legal & Compliance</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">Financial Management</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">Business Advisory</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">Specialized Cleaning</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-bold mb-4">Company</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#about" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                            <li><a href="#contact" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">Testimonials</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">Careers</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-bold mb-4">Legal</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">Privacy Policy</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">Terms of Service</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">Cookie Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2023 OGNAMISMS. All rights reserved.</p>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i data-feather="facebook"></i>
+                    </a>
+<a href="#" class="text-gray-400 hover:text-white transition">
+                        <i data-feather="linkedin"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i data-feather="instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+        // Initialize feather icons
+        feather.replace();
+
+        // Train animation keyframes
+        const style = document.createElement('style');
+        style.innerHTML = `
+        @keyframes train {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+.animate-train {
+                animation: train 30s linear infinite;
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>
